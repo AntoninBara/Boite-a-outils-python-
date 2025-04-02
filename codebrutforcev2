@@ -2,23 +2,24 @@ import string
 import time
 
 def recursive_choixcaracteres(liste, mdp, nbrepetitions, fichier):
-    # Si la longueur du mot de passe est égale au nombre de répétitions, on écrit dans le fichier
+    
     if len(mdp) == nbrepetitions:
         print(mdp)
-        fichier.write(mdp + "\n")  # Ajoute le mot de passe dans le fichier avec une nouvelle ligne
+        fichier.write(mdp + "\n")  
     else:
         for char in liste:
             recursive_choixcaracteres(liste, mdp + char, nbrepetitions, fichier)
 
 dateDebut = time.time()
-liste_caracteres = string.ascii_lowercase  # Liste des caractères (a-z)
-mdp_de_depart = ""  # Le mot de passe de départ (vide au début)
-nbre_rep = 3  # Nombre de répétitions (longueur du mot de passe)
+liste_caracteres = string.ascii_lowercase 
+mdp_de_depart = ""  
+nbre_rep = 3  
 
-with open('brutforce.txt', 'a') as fichier:  # Ouvrir le fichier en mode ajout
-    fichier.write(f"Nombre de répétitions: {nbre_rep}\n")  # Ajouter un commentaire avec le nombre de répétitions
+with open('brutforce.txt', 'a') as fichier:  
+    fichier.write(f"Nombre de répétitions: {nbre_rep}\n")  
     recursive_choixcaracteres(liste_caracteres, mdp_de_depart, nbre_rep, fichier)
 
-# Calcul du temps d'exécution
+
 dateFin = time.time()
 print(f"Temps d'exécution: {dateFin - dateDebut} secondes")
+
