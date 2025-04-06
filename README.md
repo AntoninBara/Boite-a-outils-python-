@@ -5,11 +5,12 @@ Tu y trouveras 3 code prêts à l’emploi pour :
 - Forcer un ZIP avec une attaque par dictionnaire
 - Générer un mot de passe complexe
 - Générer toutes les combinaisons possibles pour une attaque brute force
-- 
+  
 Prérequis :
 - Avoir Python installé sur ton système.
 
 Attaque par dictionnaire : 
+
 Objectif :
 Essayer tous les mots de passe d’un fichier texte (wordlist) sur un fichier ZIP protégé.
 
@@ -21,13 +22,15 @@ Fichiers nécessaires :
 - puis lance le code panse a modifier le nom.zip et la wordlist si tu les change
 
 Générateur de mots de passe :
-Objectif :
+
+Objectif : 
 Créer un mot de passe fort de 12 caractères de manière aléatoire.
 
 Comment utiliser :
 - Lance simplement le code
 
 Générateur de combinaisons (Brute Force) :
+
 Objectif :
 Générer toutes les combinaisons possibles de lettres minuscules (a-z) pour un mot de passe de longueur donnée.
 
